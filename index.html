@@ -123,7 +123,23 @@
             padding: 20px;
             margin-top: 20px;
         }
+.popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
 
+ .popup.active {
+      display: block;
+    }
 
 video{
 position:inline-block;
@@ -170,6 +186,7 @@ height:20%;
     </style>
 </head>
 <body>
+    <div class="popup" id="popupBox">
     <header>
         <h1>G & S</h1>
         <nav>
@@ -226,7 +243,7 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
 <p>I provide exceptional customer support and management services, ensuring seamless experiences for clients and their customers. 
 
 </p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="hand-3108175_1280.jpg" alt="Service 4">
@@ -234,25 +251,25 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
 <p>I specialize in digital marketing, helping businesses amplify their online presence, connect with target audiences.
 
 </p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
          <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROvksLjmSjWd1QTJABWvrit53J6gDbEQx-JQ&s" alt="Service 5">
             <h3>Customer Service Experience</h3>
             <p>I deliver exceptional customer service experiences and fostering long-term client relationships.</p>
-          <button>Learn More</button>
+          <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="https://www.theoctopustech.com/wp-content/uploads/2022/05/Tips-For-Cold-Calling.jpg" alt="Service 6">
             <h3>Cold Calling Specialty</h3>
             <p>I specialize in cold calling, connecting with potential clients to create opportunities and generate leads.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
          <div class="card">
             <img src="https://www.totalsuccess.co.uk/wp-content/uploads/2018/06/iStock-865432742_super-556x371.jpg" alt="Service 7">
             <h3>Telemarketing Services</h3>
             <p>I excel in telemarketing, leveraging persuasive communication and relationship-building skills to generate leads and drive sales.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="https://thumbor.comeup.com/unsafe/fit-in/630x354/filters:quality(90):no_upscale()/uploads/media/picture/2024-01-25/8565aef3-1411-4a17-8e2e-552a7ed672a6-65b2b8e03a9b1.jpg" alt="Service 8">
@@ -260,43 +277,43 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
             <p>I offer professional co-hosting services and Airbnb property management.
 
 </p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="https://landen.imgix.net/blog_kpOiCEdVEHhoaijj/assets/vKdgsYOfuURFbmuP.jpg?w=1600.jpg" alt="Service 3">
             <h3>Appointment Setting and Lead Generation</h3>
             <p>I streamline appointment setting processes and specialize in lead generation and nurturing.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNL523PglBR836E5YXKn3atTKF6bJJLayG6A&s" alt="Service 4">
             <h3>Virtual Sales & Support Associate</h3>
             <p>As a seasoned Virtual Sales & Support Associate, I combine sales acumen and exceptional customer support to drive business success. </p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
          <div class="card">
             <img src="https://assets.site-static.com/userFiles/2912/image/Blogs_/top_10_-_work_with_buyer_agent/contract_negotiations.jpg" alt="Service 5">
             <h3>Property Finding Expertise</h3>
             <p>I specialize in property finding, assisting clients in locating ideal properties that meet their specific needs and preferences.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-27PtLIVqnrwqIJVDhjgfhz1V3rcEZbVKmA&s" alt="Service 6">
             <h3>Airbnb Arbitrage Expertise</h3>
             <p>I specialize in Airbnb arbitrage, a strategy that involves renting properties long-term and subleasing them on platforms like Airbnb for a profit.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
          <div class="card">
             <img src="https://techoneit.com/wp-content/uploads/2023/01/CRM-Skills-That-Boost-a-Resume-1.png" alt="Service 7">
             <h3>CRM Specialty<h3>
             <p>I have extensive experience in CRM systems, which are essential for managing customer interactions and data throughout the customer lifecycle.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <div class="card">
             <img src="hand-3108175_1280.jpg" alt="Service 8">
             <h3>Service 2</h3>
             <p>Description of Service 8.</p>
-            <button>Learn More</button>
+            <button id="showPopup">Learn More</button>
         </div>
         <!-- Add more service cards as needed -->
     </section>
@@ -304,3 +321,17 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
     <footer>
         <p>&copy; 2024 Goods and Services. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
+
+                <script>
+    const showPopup = document.getElementById('showPopup');
+    const popupBox = document.getElementById('popupBox');
+    const closePopup = document.getElementById('closePopup');
+
+    showPopup.addEventListener('click', () => {
+      popupBox.classList.add('active');
+    });
+
+    closePopup.addEventListener('click', () => {
+      popupBox.classList.remove('active');
+    });
+  </script>
