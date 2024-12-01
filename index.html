@@ -123,23 +123,6 @@
             padding: 20px;
             margin-top: 20px;
         }
-.popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      background-color: white;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
- .popup.active {
-      display: block;
-    }
 
 video{
 position:inline-block;
@@ -186,7 +169,7 @@ height:20%;
     </style>
 </head>
 <body>
-    <div class="popup" id="popupBox">
+  
     <header>
         <h1>G & S</h1>
         <nav>
@@ -322,16 +305,4 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
         <p>&copy; 2024 Goods and Services. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
-                <script>
-    const showPopup = document.getElementById('showPopup');
-    const popupBox = document.getElementById('popupBox');
-    const closePopup = document.getElementById('closePopup');
-
-    showPopup.addEventListener('click', () => {
-      popupBox.classList.add('active');
-    });
-
-   // closePopup.addEventListener('click', () => {
-     // popupBox.classList.remove('active');
-   // });
-  </script>
+                
