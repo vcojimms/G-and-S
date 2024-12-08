@@ -133,10 +133,9 @@ height:20%;
 
 #dark-scene{
 position:absolute;
-height:100%;
+height:0%;
 width:100%;
 background:black;
-opacity:0;
 z-index:10;
 overflow-y:scroll;
 position:fixed;
@@ -148,7 +147,6 @@ position:relative;
 background:white;
 border:20%;
 width:80%;
-opacity:1;
 padding:3%;
 overflow-y:scroll;
 }
@@ -342,7 +340,7 @@ requestAnimationFrame(animate);
 pop.addEventListener('click',function(){
     
    
-content.style.opacity = "1";
+content.style.height = "100%";
 
 alert("working");
     
