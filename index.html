@@ -136,12 +136,12 @@ position:absolute;
 height:100%;
 width:100%;
 background:black;
-opacity:0.9;
+opacity:0;
 z-index:10;
 overflow-y:scroll;
 position:fixed;
 padding:5%;    
-display:none;
+
 }
 #pop-up{
 position:relative;
@@ -342,7 +342,7 @@ requestAnimationFrame(animate);
 pop.addEventListener('click',function(){
     
    
-content.style.display = "all";
+content.style.opacity = "1";
 
 alert("working");
     
