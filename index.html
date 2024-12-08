@@ -332,11 +332,14 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
     </footer>
 
      <script>
+const pop = document.getElementById("showPopup");
+const content =  document.getElementById('#dark-scene');
 
-document.getElementById("showPopup").addEventListener('click',function(){
+         
+pop.addEventListener('click',function(){
     
    
- document.getElementById('#dark-scene').style.display = "all";
+content.style.display = "all";
 
 alert("working");
     
