@@ -133,7 +133,7 @@ height:20%;
 
 #dark-scene{
 position:absolute;
-height:0%;
+height:100%;
 width:100%;
 background:black;
 z-index:10;
@@ -330,22 +330,12 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
     </footer>
 
      <script>
-const pop = document.getElementById("showPopup");
-const content =  document.getElementById("#dark-scene");
 
-function animate(){   
-
-requestAnimationFrame(animate);
+document.getElementById("showPopup").addEventListener('click',function(){
     
-pop.addEventListener('click',function(){
-    
-   
-content.style.height = "100%";
-
-alert("working");
-    
-                                            
+        alert("working");                                             
+                                                     
 });
-}
+
          
      </script>           
