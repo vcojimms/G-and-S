@@ -133,10 +133,10 @@ height:20%;
 
 #dark-scene{
 position:absolute;
-height:100%;
-width:100%;
+height:0%;
+width:0%;
 background:black;
-opacity:0.8;
+opacity:0.9;
 z-index:10;
 overflow-y:scroll;
 position:fixed;
@@ -191,7 +191,7 @@ overflow:flex;
       <center>
       <div id="pop-up">
           <img src="">
-          hello
+          
       </div>
           </center>
   </div>
@@ -330,4 +330,18 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
         <p>&copy; 2024 Goods and Services. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
-                
+     <script>
+
+document.getElementById('showPopup').addEventListener('click',function(){
+    
+   document.getElementById('#dark-scene').style.width = "100%";
+  document.getElementById('#dark-scene').style.height = "100%";
+
+
+
+    
+                                            
+});
+
+         
+     </script>           
