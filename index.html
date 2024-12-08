@@ -333,9 +333,12 @@ We specialize in web development, crafting user-friendly, dynamic websites that 
 
      <script>
 const pop = document.getElementById("showPopup");
-const content =  document.getElementById('#dark-scene');
+const content =  document.getElementById("#dark-scene");
 
-         
+function animate(){   
+
+requestAnimationFrame(animate);
+    
 pop.addEventListener('click',function(){
     
    
@@ -345,6 +348,6 @@ alert("working");
     
                                             
 });
-
+}
          
      </script>           
