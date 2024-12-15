@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="DALL·E 2024-12-01 14.01.37 - An illustrative icon representing 'Goods and Services'. The icon features a balance scale, symbolizing trade, with goods on one side (such as a box or.webp
+" type="image/x-icon">
+    <title>G&S</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('ecommerce-2140604.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            background: linear-gradient(orange,white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0.5px black;
+            text-shadow:0px 0px 20px white outset; 
+        }
+
+        .hero p {
+            font-size: 2rem;
+            -webkit-text-stroke: 0.5px black;
+            
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #28a745;
+        }
+
+        .products, .services {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            padding: 0 10px;
+            color: #555;
+        }
+
+        .card button {
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+video{
+position:inline-block;
+width:20%;
+height:20%;
+ margin-top:5%;   
+}
+
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  height: 95%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  animation: popIn 0.3s ease-out forwards;
+  overflow-y: scroll;
+  margin-top: 0%;
+}
+
+.popup-content>p{
+ 
+  text-align: left;
+ 
+}
+
+
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.action-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.action-btn:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        footer a {
+            color: #ff5733;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   
+
+
+    <div id="popupBox" class="popup hidden">
+        <div id="popup-content" class="popup-content">
+          <span id="closePopup" class="close-btn">&times;</span>
+          <h2>Welcome!</h2>
+          <p>Sign up now and get exclusive offers!</p>
+          <button class="action-btn">Sign Up</button>
+        </div>
+      </div>
+
+    <header>
+        <h1>G & S</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to GET-ALL</h1>
+        <p>Your one-stop site for premium goods and services</p>
+        <a href="#products" class="cta-button">Shop Now</a>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+            <button>Buy Now</button>
+        </div>
+        <!-- Add more product cards as needed -->
+    </section>
+    <center>
+        <h3>Here, creativity meets innovation!
+
+We specialize in web development, crafting user-friendly, dynamic websites that bring your vision to life.<br> As experts in digital marketing, we ensure your brand stands out, reaches the right audience, and drives real results.<br>
+
+
+</h3>
+<video src="https://cdn.pixabay.com/video/2024/02/02/198890-909564521_large.mp4" loop muted autoplay> </video>
+<video src="https://cdn.pixabay.com/video/2024/02/02/198890-909564521_large.mp4" loop muted autoplay> </video>
+        <br>
+<h3>But it’s not all business—we love to entertain! With a knack for comedy and video production, we create engaging, humorous content that keeps your audience coming back for more.
+    <br>Whether you’re here for business growth or just a good laugh, you’re in the right place.<br>Let’s build, market, and entertain—together!
+</h3>
+<video src="https://cdn.pixabay.com/video/2024/02/02/198890-909564521_large.mp4" loop muted autoplay> </video>
+<video src="https://cdn.pixabay.com/video/2024/02/02/198890-909564521_large.mp4" loop muted autoplay> </video>
+    </center>
+    
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="card" id="content-1">
+            <img src="ai-generated-8421840_1280.jpg" alt="Service 3">
+            <h3>Top-Tier Customer Support and Management Services</h3>
+<p>I provide exceptional customer support and management services, ensuring seamless experiences for clients and their customers. 
+
+</p>
+            <button id="b1" class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-2">
+            <img src="hand-3108175_1280.jpg" alt="Service 4">
+            <h3>Digital Marketing Services</h3>
+<p>I specialize in digital marketing, helping businesses amplify their online presence, connect with target audiences.
+
+</p>
+            <button id="b2" class="open-popup" >Learn More</button>
+        </div>
+         <div class="card" id="content-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROvksLjmSjWd1QTJABWvrit53J6gDbEQx-JQ&s" alt="Service 5">
+            <h3>Customer Service Experience</h3>
+            <p>I deliver exceptional customer service experiences and fostering long-term client relationships.</p>
+          <button id="b3" class="open-popup">Learn More</button>
+        </div>
+        <div class="card" id="content-4">
+            <img src="https://www.theoctopustech.com/wp-content/uploads/2022/05/Tips-For-Cold-Calling.jpg" alt="Service 6">
+            <h3>Cold Calling Specialty</h3>
+            <p>I specialize in cold calling, connecting with potential clients to create opportunities and generate leads.</p>
+            <button id="b4" class="open-popup" >Learn More</button>
+        </div>
+         <div class="card" id="content-5">
+            <img src="https://www.totalsuccess.co.uk/wp-content/uploads/2018/06/iStock-865432742_super-556x371.jpg" alt="Service 7">
+            <h3>Telemarketing Services</h3>
+            <p>I excel in telemarketing, leveraging persuasive communication and relationship-building skills to generate leads and drive sales.</p>
+            <button id="b5"  class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-6">
+            <img src="https://thumbor.comeup.com/unsafe/fit-in/630x354/filters:quality(90):no_upscale()/uploads/media/picture/2024-01-25/8565aef3-1411-4a17-8e2e-552a7ed672a6-65b2b8e03a9b1.jpg" alt="Service 8">
+            <h3>Co-hosting and Airbnb Property Management</h3>
+            <p>I offer professional co-hosting services and Airbnb property management.
+
+</p>
+            <button id="b6" class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-7">
+            <img src="https://landen.imgix.net/blog_kpOiCEdVEHhoaijj/assets/vKdgsYOfuURFbmuP.jpg?w=1600.jpg" alt="Service 3">
+            <h3>Appointment Setting and Lead Generation</h3>
+            <p>I streamline appointment setting processes and specialize in lead generation and nurturing.</p>
+            <button id="b7" class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNL523PglBR836E5YXKn3atTKF6bJJLayG6A&s" alt="Service 4">
+            <h3>Virtual Sales & Support Associate</h3>
+            <p>As a seasoned Virtual Sales & Support Associate, I combine sales acumen and exceptional customer support to drive business success. </p>
+            <button id="b8" class="open-popup" >Learn More</button>
+        </div>
+         <div class="card" id="content-9">
+            <img src="https://assets.site-static.com/userFiles/2912/image/Blogs_/top_10_-_work_with_buyer_agent/contract_negotiations.jpg" alt="Service 5">
+            <h3>Property Finding Expertise</h3>
+            <p>I specialize in property finding, assisting clients in locating ideal properties that meet their specific needs and preferences.</p>
+            <button id="b9" class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-10">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-27PtLIVqnrwqIJVDhjgfhz1V3rcEZbVKmA&s" alt="Service 6">
+            <h3>Airbnb Arbitrage Expertise</h3>
+            <p>I specialize in Airbnb arbitrage, a strategy that involves renting properties long-term and subleasing them on platforms like Airbnb for a profit.</p>
+            <button id="b10" class="open-popup" >Learn More</button>
+        </div>
+         <div class="card" id="content-11">
+            <img src="https://techoneit.com/wp-content/uploads/2023/01/CRM-Skills-That-Boost-a-Resume-1.png" alt="Service 7">
+            <h3>CRM Specialty<h3>
+            <p>I have extensive experience in CRM systems, which are essential for managing customer interactions and data throughout the customer lifecycle.</p>
+            <button id="b11" class="open-popup" >Learn More</button>
+        </div>
+        <div class="card" id="content-12">
+            <img src="https://media.licdn.com/dms/image/v2/D5612AQHyLFkv9YBcGA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1715058774193?e=2147483647&v=beta&t=7yqv62DbvJWPvycGiDX4FGb79GOPsVB_dreB-SHh36E" alt="Service 8">
+            <h3>Web Development</h3>
+            <p>Elevate your business with a website that makes a lasting impression!  We specialize in creating sleek, responsive, and high-performing websites tailored to your unique needs. Stand out online and turn visitors into loyal customers. Reach out today to bring your web vision to life!</p>
+            <button id="b12" class="open-popup" >Learn More</button>
+        </div>
+        <!-- Add more service cards as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Goods and Services. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+
+     <script>
+
+
+
+
+
+
+document.querySelectorAll('.open-popup').forEach(button => {
+  button.addEventListener('click', function () {
+    document.getElementById('popupBox').classList.remove('hidden');
+  });
+});
+
+document.getElementById('closePopup').addEventListener('click', function () {
+  document.getElementById('popupBox').classList.add('hidden');
+});
+
+window.addEventListener('click', function (e) {
+  const popup = document.getElementById('popupBox');
+  if (e.target === popup) {
+    popup.classList.add('hidden');
+  }
+});
+
+
+document.getElementById('b1').onclick = function(){
+
+
+document.getElementById('popup-content').innerHTML = "<img src='ai-generated-8421840_1280.jpg' style='width:90%; height:70%;'><h2>Customer Support & Management Specialist</h2><p>Deliver exceptional customer support via email, chat, and phone.<br><br>Resolve customer issues promptly, ensuring a high level of satisfaction.<br><br>Train and mentor team members to enhance performance and maintain consistency.<br><br>Create FAQs and guides to improve self-service for customers.<br><br>Use tools like Zendesk, HubSpot, or Salesforce to analyze support performance and customer feedback.<br><br>Collaborate with teams to refine products and processes based on insights.<br><br></p><h2>Customer Support Lead (Remote)</h2><p>Using Zendesk surveys, analyzed feedback from over 10,000 customer interactions monthly.<br><br>Segmented feedback into key metrics like resolution time and agent helpfulness, focusing improvements on the most common complaints.<br><br>Used HubSpot’s automation workflows to prioritize urgent inquiries and assign them to the best-suited agents.<br><br>Integrated automated responses for FAQs, freeing up agents for complex queries.<br><br>Managed a queue of customer tickets using Salesforce Service Cloud, categorizing issues (e.g., refunds, order tracking) and tracking daily ticket completion.<br><br>Monitored dashboards in Zendesk to ensure SLA compliance. Set automated alerts for tickets nearing deadlines to prioritize effectively.<br><br>Conducted team training using data from Zendesk Explore reports.<br>Focused on common resolution delays identified through historical ticket analysis.<br><br>Built a searchable knowledge base in Notion, allowing agents to access solutions for recurring issues in under 30 seconds.<br><br>Used HubSpot CRM to analyze customer feedback and identify top retention barriers (e.g., response delays and unclear policies).<br>Worked with the marketing team to design proactive email campaigns addressing those barriers, improving customer loyalty.<br><br>Exported and analyzed ticket trends from Zendesk over six months, identifying top complaints like return policy clarity. Suggested policy updates that reduced these complaints by 40%.<br><br>Delivered 1:1 assistance for high-value clients, using LiveChat and CRM data to recommend personalized product options.<br><br>Analyzed post-support surveys in HubSpot to ensure consistent service quality, addressing any recurring issues promptly.</p>";
+
+
+
+      
+}
+
+
+document.getElementById('b2').onclick = function(){
+
+
+document.getElementById('popup-content').innerHTML = "<img src='hand-3108175_1280.jpg' style='width:100%; height:50%;'><h2>Digital Marketing Specialist</h2><p>Develop and execute targeted marketing campaigns across multiple channels (Google Ads, social media, email, SEO).<br><br>Analyze performance metrics to optimize campaigns and improve ROI.<br><br>Conduct competitor research and audience analysis to refine strategies.<br><br>Create compelling ad copy, landing pages, and content for lead generation.<br><br>Use marketing tools to automate workflows, segment audiences, and track campaign results.<br><br>Collaborate with sales teams to align marketing efforts with business goals.<br><br></p><h2>PPC Specialist</h2><p>Used Google Ads Manager to analyze keyword performance and A/B test ad creatives.<br><br>Paused low-performing keywords and reallocated the budget to high-converting campaigns based on detailed conversion tracking.<br><br>Implemented retargeting campaigns using Google Analytics data to focus on users with the highest likelihood of conversion.</p><h2>SEO Strategist</h2><p>Conducted a full site audit using SEMrush and optimized pages with targeted keywords.<br><br>Increased backlink count by partnering with niche bloggers and using Ahrefs for outreach campaigns.<br><br>Used Google Search Console to identify underperforming pages and refreshed content to meet search intent.</p><br><br><h2>Social Media Manager</h2><p>Designed interactive campaigns with polls, reels, and stories using Canva and scheduled them with Hootsuite.<br><br>Monitored insights to identify optimal posting times and content formats.<br><br>Ran targeted campaigns with lookalike audiences on Facebook Ads Manager, leveraging retargeting to re-engage abandoned cart users.</p><h2>Email Marketing Specialist</h2><p>Used Mailchimp to segment audiences based on purchase history and engagement levels.<br><br>A/B tested subject lines and adjusted for personalization, resulting in higher email engagement.<br><br>Designed a drip campaign for a holiday sale, creating urgency through countdown timers and exclusive offers.<br><br></p><h2>Content Marketing Specialist</h2><p>Created whitepapers and guides promoted via LinkedIn Ads and integrated lead forms.<br><br>Used HubSpot to nurture leads through automated email sequences.<br><br>Researched trending topics with BuzzSumo and optimized posts with engaging headlines and visuals.<br><br></p>";
+
+
+
+      
+}
+
+
+document.getElementById('b3').onclick = function(){
+
+
+document.getElementById('popup-content').innerHTML = "<img src='hand-3108175_1280.jpg' style='width:90%; height:50%;'>";
+
+
+
+      
+}
+
+document.getElementById('b12').onclick = function(){
+
+
+document.getElementById('popup-content').innerHTML = "<img src='https://media.licdn.com/dms/image/v2/D5612AQHyLFkv9YBcGA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1715058774193?e=2147483647&v=beta&t=7yqv62DbvJWPvycGiDX4FGb79GOPsVB_dreB-SHh36E' style='width:100%; height:50%;'><p>Hello! My name is Wisdom Simeon, and I am a passionate and skilled front-end web developer with a strong focus on creating visually appealing, user-friendly, and responsive websites.<br><br>I specialize in transforming ideas and concepts into fully functional and interactive web pages.<br><br>With my expertise in HTML, CSS, JavaScript, and various front-end libraries and frameworks, I can bring your web projects to life while ensuring optimal user experience and cross-browser compatibility.<br><br>I have a deep understanding of web design principles and am always up to date with the latest trends and best practices in front-end development.<br><br>Whether it's building a responsive website from scratch, improving an existing site’s design and functionality, or creating seamless user interfaces, I am dedicated to providing top-quality work that meets your needs.<br><br><br>Throughout my career, I have worked with clients from various industries, and I am now seeking new opportunities to collaborate with businesses, startups, or individuals who need professional web development services.<br><br>If you need help with creating a stunning website or enhancing your current one, feel free to reach out. I am always open to new projects and looking forward to making your online presence stand out.<br><br>If you're interested in working with me or have any questions, please don’t hesitate to get in touch. Let's create something amazing together!</p>";
+
+
+
+      
+}
+
+
+
+
+
+
+
+
+
+
+         
+     </script>           
